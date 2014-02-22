@@ -1,11 +1,11 @@
 <ShaderNodePreset SupportsAdaptiveDegradation="0" Description="" Name="Color Theory">
    <Shader OutputBitDepth="Output" Index="1">
       <Uniform Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" DisplayName="Starting Color" ValueType="Colour" Type="vec3" Name="inputColor">
-         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.265">
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.831">
          </SubUniform>
-         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.725">
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.0">
          </SubUniform>
-         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.725">
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.0">
          </SubUniform>
       </Uniform>
       <Uniform Row="1" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Triadic" Type="bool" Name="Triadic">
@@ -18,10 +18,8 @@
       </Uniform>
       <Uniform Row="4" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Monochromatic" Type="bool" Name="Monochromatic">
       </Uniform>
-      
-	<Uniform ResDependent="None" Max="80.0" Min="0.0" Default="30.0" Inc="1.0" Tooltip="" Row="3" Col="2" Page="0" DisplayName="Degree" Type="float" Name="degree">
+      <Uniform ResDependent="None" Max="80.0" Min="0.0" Default="15.0" Inc="1.0" Tooltip="" Row="3" Col="2" Page="0" DisplayName="Degree" Type="float" Name="degree">
       </Uniform>
- 
    </Shader>
    <Page Name="Page 1" Page="0">
       <Col Name="Color" Col="0" Page="0">

@@ -204,13 +204,13 @@ if (splitComp){
 if (Analogous){
 
 	float box21 = rect(coords-vec2(0.66,0.9),boxSize);
-	vec3 color21 = analogous3 * box21;
+	vec3 color21 = inputColor * box21;
 
 	float box22 = rect(coords-vec2(0.66,0.7),boxSize);
 	vec3 color22 = analogous2 * box22;
 
 	float box20 = rect(coords-vec2(0.66,0.5),boxSize);
-	vec3 color20 = inputColor * box20;
+	vec3 color20 = analogous3 * box20;
 
 	float box23 = rect(coords-vec2(0.66,0.3),boxSize);
 	vec3 color23 = analogous1 * box23;
