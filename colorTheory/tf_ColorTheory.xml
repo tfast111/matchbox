@@ -1,0 +1,34 @@
+<ShaderNodePreset SupportsAdaptiveDegradation="0" Description="" Name="Color Theory">
+   <Shader OutputBitDepth="Output" Index="1">
+      <Uniform Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" DisplayName="Starting Color" ValueType="Colour" Type="vec3" Name="inputColor">
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.265">
+         </SubUniform>
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.725">
+         </SubUniform>
+         <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.725">
+         </SubUniform>
+      </Uniform>
+      <Uniform Row="1" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Triadic" Type="bool" Name="Triadic">
+      </Uniform>
+      <Uniform Row="2" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Split Complements" Type="bool" Name="splitComp">
+      </Uniform>
+    	<Uniform Row="3" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Analogous" Type="bool" Name="Analogous">
+      </Uniform>
+    	<Uniform Row="0" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Complement" Type="bool" Name="Complement">
+      </Uniform>
+      <Uniform Row="4" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Monochromatic" Type="bool" Name="Monochromatic">
+      </Uniform>
+      
+	<Uniform ResDependent="None" Max="80.0" Min="0.0" Default="30.0" Inc="1.0" Tooltip="" Row="3" Col="2" Page="0" DisplayName="Degree" Type="float" Name="degree">
+      </Uniform>
+ 
+   </Shader>
+   <Page Name="Page 1" Page="0">
+      <Col Name="Color" Col="0" Page="0">
+      </Col>
+      <Col Name="Scheme" Col="1" Page="0">
+      </Col>
+      <Col Name="Options" Col="2" Page="0">
+      </Col>
+   </Page>
+</ShaderNodePreset>
