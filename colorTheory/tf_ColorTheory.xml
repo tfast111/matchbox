@@ -1,4 +1,4 @@
-<ShaderNodePreset SupportsAdaptiveDegradation="0" Description="" Name="Color Theory">
+<ShaderNodePreset SupportsAdaptiveDegradation="0" Description="Find Complementary, Split Complementary, Triadic, Analogous and MonoChromatic colors based off of single color" Name="Color Theory">
    <Shader OutputBitDepth="Output" Index="1">
       <Uniform Inc="0.01" Tooltip="" Row="0" Col="0" Page="0" DisplayName="Starting Color" ValueType="Colour" Type="vec3" Name="inputColor">
          <SubUniform ResDependent="None" Max="10.0" Min="-10.0" Default="0.831">
@@ -18,7 +18,9 @@
       </Uniform>
       <Uniform Row="4" Col="1" Page="0" Default="False" Tooltip="" DisplayName="Monochromatic" Type="bool" Name="Monochromatic">
       </Uniform>
-      <Uniform ResDependent="None" Max="80.0" Min="0.0" Default="15.0" Inc="1.0" Tooltip="" Row="3" Col="2" Page="0" DisplayName="Degree" Type="float" Name="degree">
+      <Uniform ResDependent="None" Max="80.0" Min="0.0" Default="15.0" Inc="1.0" Tooltip="Degrees between colors from Starting Color" Row="3" Col="2" Page="0" DisplayName="Degree of Separ" Type="float" Name="degree">
+      </Uniform>
+      <Uniform ResDependent="None" Max="20.0" Min="0.0" Default="20.0" Inc="1.0" Tooltip="Percentage of Saturation reduction from original color" Row="4" Col="2" Page="0" DisplayName="Sat Reduction %" Type="float" Name="percent">
       </Uniform>
    </Shader>
    <Page Name="Page 1" Page="0">

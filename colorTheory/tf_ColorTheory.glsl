@@ -2,7 +2,7 @@
 //color conversion parts from mouaif.wordpress.com
 //tfast11@gmail.com
 
-uniform float adsk_result_w, adsk_result_h, degree;
+uniform float adsk_result_w, adsk_result_h, degree, percent;
 uniform vec3 inputColor;
 uniform bool Triadic, splitComp, Analogous, Complement, Monochromatic;
 
@@ -166,10 +166,8 @@ vec3 color1 = inputColor * box1;
 vec3 outputColor = color1;
 
 if (Complement){
-
 	float box4 = rect(coords-vec2(0.15,0.7),boxSize);
 	vec3 color4 = complement1 * box4;
-
 	outputColor += color4;
 	}
 
@@ -227,16 +225,16 @@ if (Monochromatic){
 	vec3 color12 = inputColor * box12;
 
 	float box13 = rect(coords-vec2(0.83,0.7),boxSize);
-	vec3 color13 = Desaturate(inputColor, .20) * box13;
+	vec3 color13 = Desaturate(inputColor, (percent/100.0)) * box13;
 	
 	float box14 = rect(coords-vec2(0.83,0.5),boxSize);
-	vec3 color14 = Desaturate(inputColor, .40) * box14;
+	vec3 color14 = Desaturate(inputColor, (percent/100.0) * 2.0) * box14;
 	
 	float box15 = rect(coords-vec2(0.83,0.3),boxSize);
-	vec3 color15 = Desaturate(inputColor, .60) * box15;
+	vec3 color15 = Desaturate(inputColor, (percent/100.0) * 3.0) * box15;
 	
 	float box16 = rect(coords-vec2(0.83,0.1),boxSize);
-	vec3 color16 = Desaturate(inputColor, .80) * box16;
+	vec3 color16 = Desaturate(inputColor, (percent/100.0) * 4.0) * box16;
 	
 	outputColor += color12+color13+color14+color15+color16;
 	}	
