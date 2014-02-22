@@ -1,4 +1,6 @@
+//Color Theory from single color
 //color conversion parts from mouaif.wordpress.com
+//tfast11@gmail.com
 
 uniform float adsk_result_w, adsk_result_h, degree;
 uniform vec3 inputColor;
