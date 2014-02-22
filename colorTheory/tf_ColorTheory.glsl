@@ -4,8 +4,6 @@ uniform float adsk_result_w, adsk_result_h, degree;
 uniform vec3 inputColor;
 uniform bool Triadic, splitComp, Analogous, Complement, Monochromatic;
 
-
-
 //Create rectangle: X position, Y position, width, height
 float rect(vec2 position, vec2 size ){
 	if(length(max(abs(position)-size,0.0))==0.0){
@@ -110,7 +108,6 @@ vec3 HSLToRGB(vec3 hsl)
 	return rgb;
 }
 
-
 void main( void ) {
 
 vec2 coords = gl_FragCoord.xy / vec2( adsk_result_w, adsk_result_h);
@@ -160,13 +157,11 @@ complement1 = RGBToHSL(inputColor);
 complement1.r = complement1.r - .5;
 complement1 = HSLToRGB(complement1);
 
-
 vec2 boxSize = vec2(0.08, 0.09);
 
 float box1 = rect(coords-vec2(0.15,0.9),boxSize);
 vec3 color1 = inputColor * box1;
 vec3 outputColor = color1;
-
 
 if (Complement){
 
@@ -244,7 +239,5 @@ if (Monochromatic){
 	outputColor += color12+color13+color14+color15+color16;
 	}	
 
-
 gl_FragColor = vec4(outputColor, 1.0);
-
 }
